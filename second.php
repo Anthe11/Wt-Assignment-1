@@ -1,0 +1,64 @@
+<?php
+
+$fstyle=$_POST['fstyle'];
+$fsize=$_POST['fsize'];
+$fcolor=$_POST['fcolor'];
+$bgcolor=$_POST['bgcolor'];
+
+
+
+setcookie('style',$fstyle);
+setcookie('color',$fcolor);
+setcookie('bgcolor',$bgcolor);
+setcookie('size',$fsize);
+
+
+
+
+//    if (isset($_COOKIE['style']))
+//    {
+//       $st=$_COOKIE['style'];
+//    }
+//    if (isset($_COOKIE['color']))
+//    {
+//       $color=$_COOKIE['color'];
+//    }
+//    if (isset($_COOKIE['bgcolor']))
+//    {
+//       $bgcolor=$_COOKIE['bgcolor'];
+//    }
+//    if (isset($_COOKIE['size']))
+//    {
+//       $size=$_COOKIE['size'];
+//    }
+
+
+
+
+
+?>
+
+<html>
+   <head>
+       <title> Second page</title>
+
+    </head>
+    <body>
+
+        <p> The information is </p>
+
+        <?php  echo"The font style : ".$fstyle."<br>";
+               echo"The font size : ".$fsize."<br>";
+               echo"The font color : ".$fcolor."<br>";
+               echo"The font bgcolor : ".$bgcolor."<br>";
+        ?>
+        <form action="third.php" method="$_POST">
+          Press submit to show implementation:<br>
+           <input type="submit" value="Send">
+
+        </form>
+               
+
+        
+    </body>
+</html>
